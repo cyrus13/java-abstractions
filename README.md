@@ -1,2 +1,2 @@
 # java-abstractions
-A library with some common utilities/abstractions that may be useful.
+A library with some common Java utilities/abstractions that may be useful.
