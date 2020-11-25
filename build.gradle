@@ -10,18 +10,18 @@ plugins {
 repositories {
     mavenLocal()
     maven {
-        url = uri('httpas://repo.maven.apache.org/maven2/')
+        url = uri('https://repo.maven.apache.org/maven2/')
     }
 }
 
 dependencies {
-    testImplementation 'junit:junit:4.12'
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.7.0'
 }
 
 group = 'net.anastasakis'
 version = '0.0.1-SNAPSHOT'
 description = 'Java Abstractions'
-java.sourceCompatibility = JavaVersion.VERSION_1_8
+java.sourceCompatibility = JavaVersion.VERSION_11
 
 publishing {
     publications {

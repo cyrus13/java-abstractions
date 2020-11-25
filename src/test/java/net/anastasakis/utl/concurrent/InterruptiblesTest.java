@@ -14,16 +14,14 @@
 package net.anastasakis.utl.concurrent;
 
 import net.anastasakis.util.concurrent.Interruptibles;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Optional;
 import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 /**
  * Test methods for {@link net.anastasakis.util.concurrent.Interruptibles} class.
@@ -47,7 +45,7 @@ public class InterruptiblesTest {
     }
 
     @Test
-    public void testCountDownLatchTimesOut() throws ExecutionException, InterruptedException {
+    public void testCountDownLatchTimesOut(){
         final CountDownLatch countDownLatch = new CountDownLatch(1);
         final CountDownLatchWaiter waiter = new CountDownLatchWaiter(countDownLatch);
         final Thread thread = new Thread(waiter);
@@ -60,7 +58,7 @@ public class InterruptiblesTest {
     }
 
     @Test
-    public void testCountDownLatchInterrupted() throws ExecutionException, InterruptedException {
+    public void testCountDownLatchInterrupted() {
         final CountDownLatch countDownLatch = new CountDownLatch(1);
         final CountDownLatchWaiter waiter = new CountDownLatchWaiter(countDownLatch);
         final Thread thread = new Thread(waiter);
