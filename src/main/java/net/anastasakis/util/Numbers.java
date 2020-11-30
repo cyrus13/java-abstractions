@@ -14,7 +14,7 @@
 package net.anastasakis.util;
 
 
-public final  class Numbers {
+public final class Numbers {
 
     private Numbers(){}
 
