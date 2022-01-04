@@ -5,13 +5,13 @@
 plugins {
     id 'java'
     id 'maven-publish'
-    id "io.freefair.lombok" version "5.3.0"
+    id "io.freefair.lombok" version "6.3.0"
 }
 
 group = 'net.anastasakis'
 version = '0.0.1-SNAPSHOT'
 description = 'Java Abstractions'
-java.sourceCompatibility = JavaVersion.VERSION_11
+java.sourceCompatibility = JavaVersion.VERSION_17
 
 repositories {
     mavenLocal()
@@ -21,8 +21,8 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
 }
 
 test {
